@@ -89,7 +89,7 @@ class ModelSMSCount ( BaseModel ):
 class SMSCounter:
     """Count sms content
     """
-    def _convert_text_to_ord ( self, sms_content: str ) -> List [ int ]:
+    def _convert_text_to_codes ( self, sms_content: str ) -> List [ int ]:
         """Convert sms content to list of char unicode code
         
         Arguments:
@@ -169,7 +169,7 @@ class SMSCounter:
             str: SMS text encoding value
         """
         """SMS content as unicode codes"""
-        sms_codes = self._convert_text_to_ord (
+        sms_codes = self._convert_text_to_codes (
             sms_content = sms_content
         );
         
@@ -200,7 +200,7 @@ class SMSCounter:
             ModelSMSCount: SMS count data
         """
         """SMS content as unicode codes"""
-        sms_codes = self._convert_text_to_ord (
+        sms_codes = self._convert_text_to_codes (
             sms_content = sms_content
         );
         
