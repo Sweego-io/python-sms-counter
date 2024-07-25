@@ -26,48 +26,15 @@ SEGMENT_LEN_UTF16 = 70;
 #: 16BIT segment length (more than 1 page)
 SEGMENT_LEN_UTF16_MULTIPART = 67;
 
+#: 7BIT all chars available
+CHARS_7BIT = u'@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞ\x1bÆæßÉ !"#¤%&\'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà';
 #: 7BIT all chars available as unicode code
-MAP_CHARS_7BIT = [
-    10, 12, 13, 32, # LF   FF   CR   Space
-    33, 34, 35, 36, # !   "   #   $
-    37, 38, 39, 40, # %   &   '   (
-    41, 42, 43, 44, # )   *   +   ,
-    45, 46, 47, 48, # -   .   /   0
-    49, 50, 51, 52, # 1   2   3   4
-    53, 54, 55, 56, # 5   6   7   8
-    57, 58, 59, 60, # 9   :   ;   <
-    61, 62, 63, 64, # =   >   ?   @
-    65, 66, 67, 68, # A   B   C   D
-    69, 70, 71, 72, # E   F   G   H
-    73, 74, 75, 76, # I   J   K   L
-    77, 78, 79, 80, # M   N   O   P
-    81, 82, 83, 84, # Q   R   S   T
-    85, 86, 87, 88, # U   V   W   X
-    89, 90, 92, 95, # Y   Z   \   _
-    97, 98, 99, 100, # a   b   c   d
-    101, 102, 103, 104, # e   f   g   h
-    105, 106, 107, 108, # i   j   k   l
-    109, 110, 111, 112, # m   n   o   p
-    113, 114, 115, 116, # q   r   s   t
-    117, 118, 119, 120, # u   v   w   x
-    121, 122, 161, 163, # y   z   ¡   £
-    164, 165, 191, 196, # ¤   ¥   ¿   Ä
-    197, 198, 199, 201, # Å   Æ   Ç   É
-    209, 214, 216, 220, # Ñ   Ö   Ø   Ü
-    223, 224, 228, 229, # ß   à   ä   å
-    230, 232, 233, 236, # æ   è   é   ì
-    241, 242, 246, 248, # ñ   ò   ö   ø
-    249, 252, 915, 916, # ù   ü   Γ   Δ
-    920, 923, 926, 928, # Θ   Λ   Ξ   Π
-    931, 934, 936, 937 # Σ   Φ   Ψ   Ω
-];
+MAP_CHARS_7BIT = [ ord ( x ) for x in CHARS_7BIT ];
 
+#: 7BIT EX all chars available
+CHARS_7BIT_EX = u'\f^{}\\[~]|€';
 #: 7BIT EX all additional chars available as unicode code
-MAP_CHARS_7BIT_EX = [
-    91, 92, 93, # [   \   ]
-    94, 123, 124, # ^   {   |
-    125, 126, 8364 # }   ~   €
-];
+MAP_CHARS_7BIT_EX = [ ord ( x ) for x in CHARS_7BIT_EX ];
 
 
 class ModelSMSCount ( BaseModel ):
