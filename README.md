@@ -9,8 +9,13 @@ from sms.counter import SMSCounter
 >>> counter = SMSCounter ();
 >>> counter.count ( 'ǂ some-string-to-be-counted' ).dict ();
 >>> {'length': 29, 'messages': 1, 'remaining': 41, 'per_message': 70, 'encoding': 'UTF16'}
->>> {'chars_per_segment': 70, 'chars_remaining': 43, 'encoding': 'UTF16', 'max_chars_available': 70, 'segment': 1, 'sms_size': 27}
-
+>>> {'chars_per_segment': 70,
+     'chars_remaining': 43,
+     'content': 'ǂ some-string-to-be-counted',
+     'encoding': 'UTF16',
+     'max_chars_available': 70,
+     'segment': 1,
+     'sms_size': 27}
 ```
 
 The meaning of the `sms_size`, `chars_remaining` and `chars_per_segment` values returned by `count()` depend on the encoding. 

@@ -13,6 +13,7 @@ from sms.counter.sms_counter import ModelSMSCount, GSM_7BIT, GSM_7BIT_EX, UTF16;
 
 DS = {
     'chars_per_segment': 123,
+    'content': 'random-content',
     'encoding': GSM_7BIT,
     'sms_size': 456
 };
@@ -27,6 +28,7 @@ class ModelSMSCount_constructorTest ( unittest.TestCase ):
         
         self.assertEqual ( ret.chars_per_segment, 123 );
         self.assertEqual ( ret.chars_remaining, 36 );
+        self.assertEqual ( ret.content, 'random-content' );
         self.assertEqual ( ret.encoding, GSM_7BIT );
         self.assertEqual ( ret.max_chars_available, 492 );
         self.assertEqual ( ret.segment, 4 );
@@ -44,6 +46,7 @@ class ModelSMSCount_constructorTest ( unittest.TestCase ):
         
         self.assertEqual ( ret.chars_per_segment, 123 );
         self.assertEqual ( ret.chars_remaining, 123 );
+        self.assertEqual ( ret.content, 'random-content' );
         self.assertEqual ( ret.encoding, GSM_7BIT );
         self.assertEqual ( ret.max_chars_available, 123 );
         self.assertEqual ( ret.segment, 0 );

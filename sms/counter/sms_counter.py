@@ -45,6 +45,7 @@ class ModelSMSCount ( BaseModel ):
     chars_remaining: int = Field (
         description = 'Number of characters remaining before adding a new segment'
     )
+    content: str
     encoding: Literal [
         GSM_7BIT,
         GSM_7BIT_EX,
@@ -238,6 +239,7 @@ class SMSCounter:
         
         return ModelSMSCount (
             chars_per_segment = chars_per_segment,
+            content = sms_content,
             encoding = encoding,
             sms_size = sms_size
         );

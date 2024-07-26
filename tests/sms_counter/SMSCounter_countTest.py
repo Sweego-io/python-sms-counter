@@ -48,6 +48,7 @@ class SMSCounter_countTest ( unittest.TestCase ):
                                 get_per_segment_chars_utf16.assert_not_called ();
                                 m_init.assert_called_once_with (
                                     chars_per_segment = 'random-chars-per-segment',
+                                    content = 'random-sms-content',
                                     encoding = GSM_7BIT,
                                     sms_size = len ( 'random-sms-codes' )
                                 );
@@ -93,6 +94,7 @@ class SMSCounter_countTest ( unittest.TestCase ):
                                 get_per_segment_chars_utf16.assert_not_called ();
                                 m_init.assert_called_once_with (
                                     chars_per_segment = 'random-chars-per-segment',
+                                    content = 'random-sms-content',
                                     encoding = GSM_7BIT_EX,
                                     sms_size = 123
                                 );
@@ -134,6 +136,7 @@ class SMSCounter_countTest ( unittest.TestCase ):
                                 );
                                 m_init.assert_called_once_with (
                                     chars_per_segment = 'random-chars-per-segment',
+                                    content = 'random-sms-content',
                                     encoding = UTF16,
                                     sms_size = len ( 'random-sms-codes' )
                                 );

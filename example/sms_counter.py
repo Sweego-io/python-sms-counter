@@ -22,7 +22,6 @@ DATASETS = [
 ];
 
 for text in DATASETS:
-    print ( ">> '{}'".format ( text ) );
     pprint ( s.count (
         sms_content = text
     ).dict () );
