@@ -5,6 +5,7 @@ from pprint import pprint;
 from pydantic import BaseModel, root_validator, validate_arguments, Field;
 from typing import Literal, Optional, List, Tuple;
 
+
 #: Encoding name : 7BIT
 GSM_7BIT = 'GSM_7BIT';
 #: 7BIT segment length (1 page)
@@ -19,11 +20,11 @@ SEGMENT_LEN_GSM_7BIT_EX = 160;
 #: 7BIT EX segment length (more than 1 page)
 SEGMENT_LEN_GSM_7BIT_EX_MULTIPART = 153;
 
-#: Encoding name : 16BIT
+#: Encoding name : UTF16
 UTF16 = 'UTF16';
-#: 16BIT segment length (1 page)
+#: UTF16 segment length (1 page)
 SEGMENT_LEN_UTF16 = 70;
-#: 16BIT segment length (more than 1 page)
+#: UTF16 segment length (more than 1 page)
 SEGMENT_LEN_UTF16_MULTIPART = 67;
 
 #: 7BIT all chars available
@@ -144,8 +145,8 @@ class SMSCounter:
         );
     
     
-    def _get_chars_per_segment_16bit ( self, sms_size: int ) -> int:
-        """Get numbers of chars per segment for encoding : 16bit
+    def _get_chars_per_segment_utf16 ( self, sms_size: int ) -> int:
+        """Get numbers of chars per segment for encoding : utf16
         
         Arguments:
             sms_size (int): SMS size
@@ -228,7 +229,7 @@ class SMSCounter:
             );
         
         elif ( encoding == UTF16 ):
-            chars_per_segment = self._get_chars_per_segment_16bit (
+            chars_per_segment = self._get_chars_per_segment_utf16 (
                 sms_size = sms_size
             );
             
