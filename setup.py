@@ -28,7 +28,7 @@ setup (
     description = 'SMS Character Counter',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    url = 'https://github.com/Mindbaz/python-sms-counter',
+    url = 'https://github.com/Sweego-io/python-sms-counter',
     author = 'Valentin Henon',
     author_email = 'vhenon@mindbaz.com',
     python_requires = '>=3.9',
