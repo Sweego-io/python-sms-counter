@@ -32,7 +32,6 @@ valid-full-coverage: ; $(eval PERCENT_COVERAGE=$(shell nosetests --with-coverage
 
 compile:
 	## To use it : make target=<TARGET> deploy
-	## To use it : make target=<TARGET> deploy
 	$(PYTHON) setup.py sdist
 	$(PYTHON) setup.py bdist_wheel
 	$(TWINE) check dist/*
