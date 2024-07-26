@@ -8,6 +8,7 @@ SPHINXOPTS?=
 SPHINXBUILD?=sphinx-build
 SOURCEDIR=source
 BUILDDIR=build
+TWINE=twine
 
 .PHONY: all coverage tests clean docs
 
@@ -31,7 +32,11 @@ valid-full-coverage: ; $(eval PERCENT_COVERAGE=$(shell nosetests --with-coverage
 
 compile:
 	## To use it : make target=<TARGET> deploy
-	python setup.py sdist upload -r $(target)
+	## To use it : make target=<TARGET> deploy
+	$(PYTHON) setup.py sdist
+	$(PYTHON) setup.py bdist_wheel
+	$(TWINE) check dist/*
+	$(TWINE) upload -r $(target) dist/*
 
 deploy: compile clean
 
