@@ -31,11 +31,10 @@ valid-full-coverage: ; $(eval PERCENT_COVERAGE=$(shell nosetests --with-coverage
 	@if [ "$(PERCENT_COVERAGE)" != "100%" ]; then false; fi
 
 compile:
-	## To use it : make target=<TARGET> deploy
 	$(PYTHON) setup.py sdist
 	$(PYTHON) setup.py bdist_wheel
 	$(TWINE) check dist/*
-	$(TWINE) upload -r $(target) dist/*
+	$(TWINE) upload dist/*
 
 deploy: compile clean
 
