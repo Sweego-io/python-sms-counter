@@ -3,7 +3,7 @@
 from math import ceil;
 from pprint import pprint;
 from pydantic import BaseModel, root_validator, validate_arguments, Field;
-from typing import Literal, Optional, List, Tuple;
+from typing import Literal, List, Tuple;
 
 
 #: Encoding name : 7BIT
@@ -80,7 +80,7 @@ class ModelSMSCount ( BaseModel ):
         values [ 'max_chars_available' ] = ( values [ 'segment' ] * values [ 'chars_per_segment'] );
         values [ 'chars_remaining' ] = ( values [ 'max_chars_available' ] - values [ 'sms_size' ] );
         
-        if ( values [ 'chars_per_segment' ] == 0 ):
+        if ( values [ 'sms_size' ] == 0 ):
             values [ 'chars_remaining' ] = values [ 'chars_per_segment' ];
             values [ 'max_chars_available' ] = values [ 'chars_per_segment' ];
         
