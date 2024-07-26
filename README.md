@@ -24,6 +24,8 @@ For `GSM_7BIT_EX` encoding, `sms_size`, `chars_remaining` and `chars_per_segment
 
 For `UTF16` and `GSM_7BIT` encoding, `sms_size`, `chars_remaining` and `chars_per_segment` count the number of characters (since all characters have an equal bit width).
 
+All `GSM_7BIT` & `GSM_7BIT_EX` characters list : https://en.wikipedia.org/wiki/GSM_03.38
+
 # Mentions
 
 * Original idea : [dedayoa/sms-counter-python](https://github.com/dedayoa/sms-counter-python))
