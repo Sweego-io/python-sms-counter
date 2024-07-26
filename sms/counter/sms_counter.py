@@ -39,13 +39,21 @@ MAP_CHARS_7BIT_EX = [ ord ( x ) for x in CHARS_7BIT_EX ];
 
 
 class ModelSMSCount ( BaseModel ):
+    """Output sms count model data
+    """
+    """Number of characters per segment"""
     chars_per_segment: int = Field (
         description = 'Number of characters per segment'
     )
+    """Auto filled with cls.fill_fields(). Number of characters remaining before adding a new segment"""
     chars_remaining: int = Field (
         description = 'Number of characters remaining before adding a new segment'
     )
-    content: str
+    """SMS content"""
+    content: str = Field (
+        description = 'SMS content'
+    )
+    """Current text encoding"""
     encoding: Literal [
         GSM_7BIT,
         GSM_7BIT_EX,
@@ -53,12 +61,15 @@ class ModelSMSCount ( BaseModel ):
     ] = Field (
         description = 'Current text encoding'
     )
+    """Auto filled with cls.fill_fields(). Number of characters max for current number of segments"""
     max_chars_available: int = Field (
         description = 'Number of characters max for current number of segments'
     )
+    """Auto filled with cls.fill_fields(). Number of sms pages"""
     segment: int = Field (
         description = 'Number of sms pages'
     )
+    """SMS number of characters"""
     sms_size: int = Field (
         description = 'SMS number of characters'
     )
