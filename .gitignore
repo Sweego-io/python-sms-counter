@@ -54,6 +54,7 @@ reports/
 
 # Sphinx documentation
 docs/_build/
+make.bat
 
 # PyBuilder
 target/

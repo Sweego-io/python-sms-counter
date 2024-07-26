@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to SMS Counter’s documentation! &mdash; SMS Counter 0.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            SMS Counter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to SMS Counter’s documentation!</a><ul>
+<li><a class="reference internal" href="#sms.counter.sms_counter.CHARS_7BIT"><code class="docutils literal notranslate"><span class="pre">CHARS_7BIT</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.CHARS_7BIT_EX"><code class="docutils literal notranslate"><span class="pre">CHARS_7BIT_EX</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.GSM_7BIT"><code class="docutils literal notranslate"><span class="pre">GSM_7BIT</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.GSM_7BIT_EX"><code class="docutils literal notranslate"><span class="pre">GSM_7BIT_EX</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.MAP_CHARS_7BIT"><code class="docutils literal notranslate"><span class="pre">MAP_CHARS_7BIT</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.MAP_CHARS_7BIT_EX"><code class="docutils literal notranslate"><span class="pre">MAP_CHARS_7BIT_EX</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount</span></code></a><ul>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.chars_per_segment"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.chars_per_segment</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.chars_remaining"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.chars_remaining</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.content"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.content</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.encoding"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.encoding</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.fill_fields"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.fill_fields()</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.max_chars_available"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.max_chars_available</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount.segment"><code class="docutils literal notranslate"><span class="pre">ModelSMSCount.segment</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT"><code class="docutils literal notranslate"><span class="pre">SEGMENT_LEN_GSM_7BIT</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_EX"><code class="docutils literal notranslate"><span class="pre">SEGMENT_LEN_GSM_7BIT_EX</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_EX_MULTIPART"><code class="docutils literal notranslate"><span class="pre">SEGMENT_LEN_GSM_7BIT_EX_MULTIPART</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_MULTIPART"><code class="docutils literal notranslate"><span class="pre">SEGMENT_LEN_GSM_7BIT_MULTIPART</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SEGMENT_LEN_UTF16"><code class="docutils literal notranslate"><span class="pre">SEGMENT_LEN_UTF16</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SEGMENT_LEN_UTF16_MULTIPART"><code class="docutils literal notranslate"><span class="pre">SEGMENT_LEN_UTF16_MULTIPART</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter"><code class="docutils literal notranslate"><span class="pre">SMSCounter</span></code></a><ul>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter._convert_text_to_codes"><code class="docutils literal notranslate"><span class="pre">SMSCounter._convert_text_to_codes()</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter._get_chars_per_segment_7bit"><code class="docutils literal notranslate"><span class="pre">SMSCounter._get_chars_per_segment_7bit()</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter._get_chars_per_segment_7bit_ex"><code class="docutils literal notranslate"><span class="pre">SMSCounter._get_chars_per_segment_7bit_ex()</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter._get_chars_per_segment_utf16"><code class="docutils literal notranslate"><span class="pre">SMSCounter._get_chars_per_segment_utf16()</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter.count"><code class="docutils literal notranslate"><span class="pre">SMSCounter.count()</span></code></a></li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.SMSCounter.get_encoding"><code class="docutils literal notranslate"><span class="pre">SMSCounter.get_encoding()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sms.counter.sms_counter.UTF16"><code class="docutils literal notranslate"><span class="pre">UTF16</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">SMS Counter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to SMS Counter’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sms.counter.sms_counter">
+<span id="welcome-to-sms-counter-s-documentation"></span><h1>Welcome to SMS Counter’s documentation!<a class="headerlink" href="#module-sms.counter.sms_counter" title="Permalink to this heading"></a></h1>
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.CHARS_7BIT">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">CHARS_7BIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&#64;£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞ\x1bÆæßÉ</span> <span class="pre">!&quot;#¤%&amp;\'()*+,-./0123456789:;&lt;=&gt;?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà'</span></em><a class="headerlink" href="#sms.counter.sms_counter.CHARS_7BIT" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT all chars available</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.CHARS_7BIT_EX">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">CHARS_7BIT_EX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x0c^{}\\[~]|€'</span></em><a class="headerlink" href="#sms.counter.sms_counter.CHARS_7BIT_EX" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT EX all chars available</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.GSM_7BIT">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">GSM_7BIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GSM_7BIT'</span></em><a class="headerlink" href="#sms.counter.sms_counter.GSM_7BIT" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Encoding name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.GSM_7BIT_EX">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">GSM_7BIT_EX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GSM_7BIT_EX'</span></em><a class="headerlink" href="#sms.counter.sms_counter.GSM_7BIT_EX" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT EX</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Encoding name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.MAP_CHARS_7BIT">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">MAP_CHARS_7BIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[64,</span> <span class="pre">163,</span> <span class="pre">36,</span> <span class="pre">165,</span> <span class="pre">232,</span> <span class="pre">233,</span> <span class="pre">249,</span> <span class="pre">236,</span> <span class="pre">242,</span> <span class="pre">199,</span> <span class="pre">10,</span> <span class="pre">216,</span> <span class="pre">248,</span> <span class="pre">13,</span> <span class="pre">197,</span> <span class="pre">229,</span> <span class="pre">916,</span> <span class="pre">95,</span> <span class="pre">934,</span> <span class="pre">915,</span> <span class="pre">923,</span> <span class="pre">937,</span> <span class="pre">928,</span> <span class="pre">936,</span> <span class="pre">931,</span> <span class="pre">920,</span> <span class="pre">926,</span> <span class="pre">27,</span> <span class="pre">198,</span> <span class="pre">230,</span> <span class="pre">223,</span> <span class="pre">201,</span> <span class="pre">32,</span> <span class="pre">33,</span> <span class="pre">34,</span> <span class="pre">35,</span> <span class="pre">164,</span> <span class="pre">37,</span> <span class="pre">38,</span> <span class="pre">39,</span> <span class="pre">40,</span> <span class="pre">41,</span> <span class="pre">42,</span> <span class="pre">43,</span> <span class="pre">44,</span> <span class="pre">45,</span> <span class="pre">46,</span> <span class="pre">47,</span> <span class="pre">48,</span> <span class="pre">49,</span> <span class="pre">50,</span> <span class="pre">51,</span> <span class="pre">52,</span> <span class="pre">53,</span> <span class="pre">54,</span> <span class="pre">55,</span> <span class="pre">56,</span> <span class="pre">57,</span> <span class="pre">58,</span> <span class="pre">59,</span> <span class="pre">60,</span> <span class="pre">61,</span> <span class="pre">62,</span> <span class="pre">63,</span> <span class="pre">161,</span> <span class="pre">65,</span> <span class="pre">66,</span> <span class="pre">67,</span> <span class="pre">68,</span> <span class="pre">69,</span> <span class="pre">70,</span> <span class="pre">71,</span> <span class="pre">72,</span> <span class="pre">73,</span> <span class="pre">74,</span> <span class="pre">75,</span> <span class="pre">76,</span> <span class="pre">77,</span> <span class="pre">78,</span> <span class="pre">79,</span> <span class="pre">80,</span> <span class="pre">81,</span> <span class="pre">82,</span> <span class="pre">83,</span> <span class="pre">84,</span> <span class="pre">85,</span> <span class="pre">86,</span> <span class="pre">87,</span> <span class="pre">88,</span> <span class="pre">89,</span> <span class="pre">90,</span> <span class="pre">196,</span> <span class="pre">214,</span> <span class="pre">209,</span> <span class="pre">220,</span> <span class="pre">167,</span> <span class="pre">191,</span> <span class="pre">97,</span> <span class="pre">98,</span> <span class="pre">99,</span> <span class="pre">100,</span> <span class="pre">101,</span> <span class="pre">102,</span> <span class="pre">103,</span> <span class="pre">104,</span> <span class="pre">105,</span> <span class="pre">106,</span> <span class="pre">107,</span> <span class="pre">108,</span> <span class="pre">109,</span> <span class="pre">110,</span> <span class="pre">111,</span> <span class="pre">112,</span> <span class="pre">113,</span> <span class="pre">114,</span> <span class="pre">115,</span> <span class="pre">116,</span> <span class="pre">117,</span> <span class="pre">118,</span> <span class="pre">119,</span> <span class="pre">120,</span> <span class="pre">121,</span> <span class="pre">122,</span> <span class="pre">228,</span> <span class="pre">246,</span> <span class="pre">241,</span> <span class="pre">252,</span> <span class="pre">224]</span></em><a class="headerlink" href="#sms.counter.sms_counter.MAP_CHARS_7BIT" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT all chars available as unicode code</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.MAP_CHARS_7BIT_EX">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">MAP_CHARS_7BIT_EX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[12,</span> <span class="pre">94,</span> <span class="pre">123,</span> <span class="pre">125,</span> <span class="pre">92,</span> <span class="pre">91,</span> <span class="pre">126,</span> <span class="pre">93,</span> <span class="pre">124,</span> <span class="pre">8364]</span></em><a class="headerlink" href="#sms.counter.sms_counter.MAP_CHARS_7BIT_EX" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT EX all additional chars available as unicode code</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">ModelSMSCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars_per_segment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars_remaining</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'GSM_7BIT'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'GSM_7BIT_EX'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'UTF16'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_chars_available</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sms_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount" title="Permalink to this definition"></a></dt>
+<dd><p>Output sms count model data</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.chars_per_segment">
+<span class="sig-name descname"><span class="pre">chars_per_segment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.chars_per_segment" title="Permalink to this definition"></a></dt>
+<dd><p>Auto filled with cls.fill_fields(). Number of characters remaining before adding a new segment</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.chars_remaining">
+<span class="sig-name descname"><span class="pre">chars_remaining</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.chars_remaining" title="Permalink to this definition"></a></dt>
+<dd><p>SMS content</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.content">
+<span class="sig-name descname"><span class="pre">content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.content" title="Permalink to this definition"></a></dt>
+<dd><p>Current text encoding</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.encoding">
+<span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'GSM_7BIT'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'GSM_7BIT_EX'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'UTF16'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.encoding" title="Permalink to this definition"></a></dt>
+<dd><p>Auto filled with cls.fill_fields(). Number of characters max for current number of segments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.fill_fields">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fill_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.fill_fields" title="Permalink to this definition"></a></dt>
+<dd><p>Fiell fields : segment / max_chars_available / chars_remaining</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount" title="sms.counter.sms_counter.ModelSMSCount"><em>ModelSMSCount</em></a>) – Class</p></li>
+<li><p><strong>values</strong> (<em>dict</em>) – Input values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Input values with new fields</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.max_chars_available">
+<span class="sig-name descname"><span class="pre">max_chars_available</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.max_chars_available" title="Permalink to this definition"></a></dt>
+<dd><p>Auto filled with cls.fill_fields(). Number of sms pages</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.ModelSMSCount.segment">
+<span class="sig-name descname"><span class="pre">segment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sms.counter.sms_counter.ModelSMSCount.segment" title="Permalink to this definition"></a></dt>
+<dd><p>SMS number of characters</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SEGMENT_LEN_GSM_7BIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">160</span></em><a class="headerlink" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT segment length (1 page)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_EX">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SEGMENT_LEN_GSM_7BIT_EX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">160</span></em><a class="headerlink" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_EX" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT EX segment length (1 page)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_EX_MULTIPART">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SEGMENT_LEN_GSM_7BIT_EX_MULTIPART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">153</span></em><a class="headerlink" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_EX_MULTIPART" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT EX segment length (more than 1 page)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_MULTIPART">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SEGMENT_LEN_GSM_7BIT_MULTIPART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">153</span></em><a class="headerlink" href="#sms.counter.sms_counter.SEGMENT_LEN_GSM_7BIT_MULTIPART" title="Permalink to this definition"></a></dt>
+<dd><p>7BIT segment length (more than 1 page)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SEGMENT_LEN_UTF16">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SEGMENT_LEN_UTF16</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">70</span></em><a class="headerlink" href="#sms.counter.sms_counter.SEGMENT_LEN_UTF16" title="Permalink to this definition"></a></dt>
+<dd><p>UTF16 segment length (1 page)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SEGMENT_LEN_UTF16_MULTIPART">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SEGMENT_LEN_UTF16_MULTIPART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">67</span></em><a class="headerlink" href="#sms.counter.sms_counter.SEGMENT_LEN_UTF16_MULTIPART" title="Permalink to this definition"></a></dt>
+<dd><p>UTF16 segment length (more than 1 page)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">SMSCounter</span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter" title="Permalink to this definition"></a></dt>
+<dd><p>Count sms content</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter._convert_text_to_codes">
+<span class="sig-name descname"><span class="pre">_convert_text_to_codes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sms_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter._convert_text_to_codes" title="Permalink to this definition"></a></dt>
+<dd><p>Convert sms content to list of char unicode code</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sms_content</strong> (<em>str</em>) – SMS content</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>SMS content as list of unicode code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter._get_chars_per_segment_7bit">
+<span class="sig-name descname"><span class="pre">_get_chars_per_segment_7bit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sms_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter._get_chars_per_segment_7bit" title="Permalink to this definition"></a></dt>
+<dd><p>Get numbers of chars per segment for encoding : 7bit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sms_size</strong> (<em>int</em>) – SMS size</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Number of chars per segment</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter._get_chars_per_segment_7bit_ex">
+<span class="sig-name descname"><span class="pre">_get_chars_per_segment_7bit_ex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sms_codes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sms_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter._get_chars_per_segment_7bit_ex" title="Permalink to this definition"></a></dt>
+<dd><p>Get numbers of chars per segment for encoding : 7bit ex</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sms_codes</strong> (<em>int</em><em>[</em><em>]</em>) – SMS content as unicode codes</p></li>
+<li><p><strong>sms_size</strong> (<em>int</em>) – SMS size</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>SMS size updated / Number of chars per segment</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple(int,int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter._get_chars_per_segment_utf16">
+<span class="sig-name descname"><span class="pre">_get_chars_per_segment_utf16</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sms_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter._get_chars_per_segment_utf16" title="Permalink to this definition"></a></dt>
+<dd><p>Get numbers of chars per segment for encoding : utf16</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sms_size</strong> (<em>int</em>) – SMS size</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Number of chars per segment</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sms_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount" title="sms.counter.sms_counter.ModelSMSCount"><span class="pre">ModelSMSCount</span></a></span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter.count" title="Permalink to this definition"></a></dt>
+<dd><p>Count sms</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sms_content</strong> (<em>str</em>) – SMS text</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – if encoding not supported</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SMS count data</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#sms.counter.sms_counter.ModelSMSCount" title="sms.counter.sms_counter.ModelSMSCount">ModelSMSCount</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.SMSCounter.get_encoding">
+<span class="sig-name descname"><span class="pre">get_encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sms_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'GSM_7BIT'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'GSM_7BIT_EX'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'UTF16'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sms.counter.sms_counter.SMSCounter.get_encoding" title="Permalink to this definition"></a></dt>
+<dd><p>Get sms encoding</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sms_content</strong> (<em>str</em>) – SMS text</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>SMS text encoding value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sms.counter.sms_counter.UTF16">
+<span class="sig-prename descclassname"><span class="pre">sms.counter.sms_counter.</span></span><span class="sig-name descname"><span class="pre">UTF16</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UTF16'</span></em><a class="headerlink" href="#sms.counter.sms_counter.UTF16" title="Permalink to this definition"></a></dt>
+<dd><p>UTF16</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Encoding name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Mindbaz.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -4,8 +4,12 @@ ROOT_NAME:=$(shell basename ${ROOT_DIR})
 PARENT_DIR:=$(shell dirname ${ROOT_DIR})
 TEST_FILES:=$(shell find ./tests/ -iname "*Test.py" | tr '\n' ',' | sed -e 's/,$$//g')
 PYTHON=python
+SPHINXOPTS?=
+SPHINXBUILD?=sphinx-build
+SOURCEDIR=source
+BUILDDIR=build
 
-.PHONY: all coverage tests clean
+.PHONY: all coverage tests clean docs
 
 all: run
 
@@ -32,6 +36,10 @@ compile:
 deploy: compile clean
 
 auto-clean: clean
+
+docs:
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	@cp -rv $(ROOT_DIR)/$(BUILDDIR)/html/* $(ROOT_DIR)/docs/
 
 clean:
 	@echo ">> Remove python compilation : *.pyc / pycache / build / dist / egg"
