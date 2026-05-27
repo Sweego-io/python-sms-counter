@@ -14,6 +14,12 @@ dependencies = [
     "pydantic",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pynose",
+    "coverage",
+]
+
 [tool.setuptools.dynamic]
 version = { attr = "sms.counter.__version__" }
 
